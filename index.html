@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="Swift Objective-C Python Java">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,14 +79,14 @@
 
 
 
-<meta name="keywords" content="iOS java">
+<meta name="keywords" content="iOS java python pyspider">
 <meta property="og:type" content="website">
-<meta property="og:title" content="高山仰止，景行行止">
+<meta property="og:title" content="高山仰止，景航行止">
 <meta property="og:url" content="https://github.com/kyleYang/index.html">
-<meta property="og:site_name" content="高山仰止，景行行止">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="高山仰止，景航行止">
+<meta property="og:locale" content="Swift Objective-C Python Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="高山仰止，景行行止">
+<meta name="twitter:title" content="高山仰止，景航行止">
 
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <title>高山仰止，景行行止</title>
+  <title>高山仰止，景航行止</title>
   
 
 
@@ -134,7 +134,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="Swift Objective-C Python Java">
 
   
   
@@ -153,7 +153,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">高山仰止，景行行止</span>
+        <span class="site-title">高山仰止，景航行止</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -230,6 +230,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/kyleYang/2018/12/23/mac-pyspider-安装与遇到的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kyle Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高山仰止，景航行止">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/23/mac-pyspider-安装与遇到的问题/" itemprop="url">mac pyspider 安装与遇到的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-23T21:09:27+08:00">
+                2018-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近想学习下爬虫，依稀觉得python对爬虫支持比较好，所以从github上找了几个比较好的python版本的爬虫比较了下。<br>秉着应用起来先，所以现则了 pyspider ，等熟悉了python以及爬虫后再学习scrapy</p>
+<h4 id="1-python-选择"><a href="#1-python-选择" class="headerlink" title="1. python 选择"></a>1. python 选择</h4><p>  mac 自带有python 2.7 的版本 , 但是我想使用 python3 的版本。<br>  一开始选择了使用 brew 安装 python，现在 brew 上是 3.7.1 ，不过pyspider不支持 3.7的版本，在这个上面踩了很多坑，后面在python的官网 <a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a> 下载了3.6.7</p>
+<h4 id="2-mac-两个python-配置"><a href="#2-mac-两个python-配置" class="headerlink" title="2. mac 两个python 配置."></a>2. mac 两个python 配置.</h4><p>   在terminal输入<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which python3</span><br></pre></td></tr></table></figure></p>
+<p>   查看python3的位置<br>   打开 bash_profile<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alias python2=&quot;/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7&quot;</span><br><span class="line">alias python3=&quot;/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6&quot;</span><br><span class="line">alias python=python3</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>   python=python3 切换默认的python版本<br>   重启 在terminal<br>   如果是是下载安装，而不是用brew，会自动在 bash_profile 中生成. 一开始我注销后，导致后面的 pyspider 一直运行不成功<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=&quot;/Library/Frameworks/Python.framework/Versions/3.6/bin:$&#123;PATH&#125;&quot;</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure></p>
+<p>   如果是python3 默认是安装了 pip3. 如果是python2 还需要自己再安装 pip3</p>
+<h4 id="3-安装-phantomjs"><a href="#3-安装-phantomjs" class="headerlink" title="3. 安装 phantomjs"></a>3. 安装 phantomjs</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install phantomjs</span><br></pre></td></tr></table></figure>
+<p>   如果遇见25555端口被占用，mac可以用如下查看端口并杀掉进程<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsof -i tcp:25555</span><br><span class="line">kill pid</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-安装-pyspider"><a href="#4-安装-pyspider" class="headerlink" title="4. 安装 pyspider"></a>4. 安装 pyspider</h4>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install pyspider</span><br></pre></td></tr></table></figure>
+<p>   一定要确定 pyspider 的安装位置，因为现在有两个 python 。 我使用 pip3 安装在python3目录下<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyspider all</span><br></pre></td></tr></table></figure></p>
+<p>   启动 pyspider</p>
+<h4 id="启动pyspider，显示-pycurl-错误。"><a href="#启动pyspider，显示-pycurl-错误。" class="headerlink" title="启动pyspider，显示 pycurl 错误。"></a>启动pyspider，显示 pycurl 错误。</h4><p>   pycurl: libcurl link-time ssl backend (openssl) is different from compile-time ssl backend (none/other)<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip3 uninstall pycurl# 卸載庫</span><br><span class="line">export PYCURL_SSL_LIBRARY=openssl</span><br><span class="line">export LDFLAGS=-L/usr/local/opt/openssl/lib</span><br><span class="line">export CPPFLAGS=-I/usr/local/opt/openssl/include# openssl相關頭文檔路徑</span><br><span class="line">pip3 install pycurl --compile --no-cache-dir # 重新編譯安裝</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/kyleYang/2018/05/19/aliyun_prepare/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -239,7 +371,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高山仰止，景行行止">
+      <meta itemprop="name" content="高山仰止，景航行止">
     </span>
 
     
@@ -302,7 +434,10 @@
         
           
             <p>Mac 客户端配置</p>
-<h4 id="一-aliyun-ssh-连接"><a href="#一-aliyun-ssh-连接" class="headerlink" title="一.aliyun ssh 连接"></a>一.aliyun ssh 连接</h4><p><br>1. 上传 ssh 公钥， 如果没有生成,先生成ssh<br></p>
+<h3 id="一-aliyun-ssh-连接"><a href="#一-aliyun-ssh-连接" class="headerlink" title="一.aliyun ssh 连接"></a>一.aliyun ssh 连接</h3><h4 id="1-检查-ssh-公钥，-没有生成ssh-生成ssh"><a href="#1-检查-ssh-公钥，-没有生成ssh-生成ssh" class="headerlink" title="1. 检查 ssh 公钥， 没有生成ssh,生成ssh"></a>1. 检查 ssh 公钥， 没有生成ssh,生成ssh</h4><p></p><p><br>1.打开终端查看是否已经存在SSH密钥：cd ~/.ssh ,查看是否有 rsa 以及 rsa.pub,没有则执行第二步<br>2.生成新的秘钥, 命令如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可。<br></p><p></p>
+<h4 id="2-copy-证书到服务器，将证书写入后销毁"><a href="#2-copy-证书到服务器，将证书写入后销毁" class="headerlink" title="2. copy 证书到服务器，将证书写入后销毁"></a>2. copy 证书到服务器，将证书写入后销毁</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh  </span><br><span class="line">scp id_rsa.pub root@101.200.00.00:~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>登录服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh root@IP地址  </span><br><span class="line">cd ~/.ssh  </span><br><span class="line">cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line">rm id_rsa.pub  </span><br><span class="line">exit</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -384,7 +519,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -397,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
